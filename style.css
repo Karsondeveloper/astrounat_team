@@ -1,0 +1,168 @@
+:root{
+    --backgroundcolor: #201b2c;
+    --colortextprincipal:  #77ffc0;
+    --boxshadowcolor: #00000075;
+    --cardlogintextprincipal: #00ff88;
+    --backgroundinputs: #514869;
+    --backgroundplacholder: #f0ffffde;
+    --backgroundplaceholder2: #f0ffff94;
+    --buttontext: #2b134b;
+    --buttonbackground: #00ff88;
+    --buttonbackgroundblur: #00ff8052; 
+    --backgroundconteinerlogin: #2f2841;         
+    --backgroundbuttonfocus: #1b8352;         
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body  {
+    box-sizing: border-box;
+}
+
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--backgroundcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > h1{
+    color: var(--colortextprincipal);
+    font-size: 3vw;
+}
+
+.left-login-image{
+    width: 35vw;
+}
+
+.right-login{
+    width: 50vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 45px 45px;
+    background-color: var(--backgroundconteinerlogin);
+    border-radius: 13px;
+    box-shadow: 0px 0px 40px var(--boxshadowcolor);
+}
+
+.card-login > h1{
+    color: var(--cardlogintextprincipal);
+    font-weight: 800;
+    margin: 0;
+}
+
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: var(--backgroundinputs);
+    color: var(--backgroundplacholder);
+    font-size: 12pt;
+    box-shadow: 0px 0px 15px #00000075;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label{
+    color: var(--backgroundplacholder);
+    margin-bottom: 10px;
+
+}
+
+.textfield > input::placeholder{
+     color: var(--backgroundplaceholder2);
+}
+
+.btn-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--buttontext);
+    background-color: var(--buttonbackground);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px var(--buttonbackgroundblur);
+}
+
+.btn-login:focus{
+    background-color: var(--backgroundbuttonfocus);
+}
+
+.btn-login:hover{
+    background-color: var(--backgroundbuttonfocus);
+    transition: 0.8s;
+}
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+    }
+
+    .left-login > h1{
+        display: none;
+    }
+
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+
+    .right-login{
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login-image{
+        width: 50vw;
+    }
+
+    .card-login{
+        width: 90%;
+    }
+}
+
